@@ -132,9 +132,15 @@
 </body>
 
 
-<script type="text/javascript">
-	window.addEventListener("hashchange", function() { scrollBy(0, -70) })
-  	
+<script>
+	
+	$("a").on("click", function(){
+	    var height= $("#navbar-container").outerHeight();
+	    var pos = $($(this).attr("href")).position().top;
+	    $("body").scrollTop(pos - height);
+	    return false;
+	});
+
 </script>
 
 
