@@ -44,9 +44,6 @@
 		}
 
 
-
-
-
 	</style>
 
 </head>
@@ -63,10 +60,10 @@
 		      <a class="navbar-brand" href="#">PersonalPortfolio</a>
 		    </div>
 		  <div class="collapse navbar-collapse" id="myNavbar">
-		    <ul class="nav navbar-nav navbar-right">
-		      <li class="active"><a class="scrollable" href="#about">ABOUT</a></li>
-		      <li><a class="scrollable" href="#portfolio">PORTFOLIO</a></li> 
-		      <li><a class="scrollable" href="#contac">CONTAC</a></li> 
+		    <ul id="secciones" class="nav navbar-nav navbar-right">
+		      <li id="about-anchor"><a href="#about">ABOUT</a></li>
+		      <li id="portfolio-anchor"><a href="#portfolio">PORTFOLIO</a></li> 
+		      <li id="contac-anchor"><a href="#contac">CONTAC</a></li> 
 		    </ul>
 		  </div>
 		</div>
@@ -129,11 +126,9 @@
 	</section>
 
 	<!-- footer -->
-
 	<div class="navbar navbar-default navbar-fixed-bottom navbar-inverse">
 	    <div class="container">
-	      <p class="navbar-text pull-left">© 2014 - Footer
-	           <a href="http://tinyurl.com/tbvalid" target="_blank" >HTML 5 Validation</a>
+	      <p class="navbar-text pull-left">© 2016 - Personal Portfolio
 	      </p>
 
 	      <a href="#" class="navbar-btn btn-danger btn pull-right">
@@ -146,12 +141,43 @@
 
 <script>
 	
+	
 	$("a").on("click", function(){
+		//remueve la clase active de todos los botones
+		$('#secciones li').each(function () {
+			$(this).removeClass('active');
+		});
+		//agrega la clase active a los li cuando se presiona su corrrespondiente boton
+		$(this).parent().addClass('active');
+
+		//hace el desplazamiento correctamente
 	    var height= $("#navbar-container").outerHeight();
 	    var pos = $($(this).attr("href")).position().top;
 	    $("body").scrollTop(pos - height);
 	    return false;
 	});
+
+
+
+	window.onscroll = function() {myFunction()};
+
+	function myFunction() {
+
+
+		$('section').each(function () {
+			var seccion = $(this);
+			if (pageYOffset >= seccion.position().top && pageYOffset < seccion.position().top + seccion.height()){
+				$("a[href='#seccion']")
+			} else {
+
+			}
+
+
+		});
+
+	}
+	
+
 
 </script>
 
