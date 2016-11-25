@@ -27,22 +27,22 @@
 
 		body{ 
 			padding-top: 70px;
-			background-color: #EEE; 
+			background-color: #FFF; 
 		}
 
 		#about-body{
-			background-color: #AAA; 
+			background-color: #CCC; 
 			margin: 0 15% 0 15%;
 		}
 
 
 		#portfolio-body{
-			background-color: #CCC; 
+			background-color: #EEE; 
 			margin: 0 15% 0 15%;
 		}
 
 		#contac-body{
-			background-color: #AAA; 
+			background-color: #CCC; 
 			margin: 0 15% 0 15%;
 		}
 
@@ -145,8 +145,8 @@
 	      </ul>
 	    </div>
 	  </div>
-	  <div id="footer-below" style="background-color:#222; color:#fff;margin: 0 0 0 0;padding: 25px 0px 25px 0px;">qlip © 
-	    <script>document.write(new Date().getFullYear())</script>2016. All Rights Reversed
+	  <div id="footer-below" style="background-color:#222; color:#fff;margin: 0 0 0 0;padding: 25px 0px 25px 0px;">© 
+	    <script>document.write(new Date().getFullYear())</script> All Rights Reversed
 	  </div>
 	</footer>
 
@@ -159,11 +159,11 @@
 <script>
 
 
-	window.onscroll = function() {cambiarSeccionActiva()};
+	window.onscroll = function() {
+		cambiarSeccionActiva();
+	};
 
 	function cambiarSeccionActiva() {
-
-
 		$('section').each(function () {
 			var seccion = $(this);
 			var height = $("#navbar-container").outerHeight();
@@ -179,10 +179,14 @@
 		});
 	}
 
-
-
-
 	
+	$("a").on("click", function(){
+	    var height = $("#navbar-container").outerHeight();
+	    var pos = $($(this).attr("href")).position().top;
+	    $("body").scrollTop(pos - height);
+	    return false;
+	});
+
 
 
 </script>
