@@ -46,6 +46,22 @@
 			margin: 0 15% 0 15%;
 		}
 
+		#footer{
+			color:#fff;
+		}
+
+		#footer-above{
+			background-color:#444; 
+			padding: 50px 0px 50px 0px;
+			margin: 0 0 0 0;
+		}
+
+		#footer-below{
+			background-color:#222; 
+			padding: 25px 0px 25px 0px;
+			margin: 0 0 0 0;
+		}
+
 
 	</style>
 
@@ -71,7 +87,6 @@
 		  </div>
 		</div>
 	</nav>
-
 
 	<!-- ABOUT -->
 	<section id="about">
@@ -129,32 +144,28 @@
 	</section>
 
 	<!-- footer -->
-	<footer>
-	  <div id="footer-above" style="background-color:#444; color:#fff;margin: 0 0 0 0;padding: 50px 0px 50px 0px;">
-	    <div>
-	      <h3 style="margin:0 0 0 0;">About this page</h3>
+	<footer id="footer">
+	  <div id="footer-above" class="row" >
+	    <div class="footer-col col-md-6 text-center">
+	      <h3 >About this page</h3>
 	      <p>Made with <i class="fa fa-fw fa-coffee"></i> and <i class="fa fa-fw fa-music"></i><br>by <a href="#">theedu</a>.</p>
 	    </div>
-	    <div>
+	    <div class="footer-col col-md-6 text-center"> 
 	      <h3>Around the Web</h3>
-	      <ul>
-	        <li><a href="#" class="button social"><i class="fa fa-fw fa-linkedin"></i></a></li>
-	        <li><a href="https://github.com/theedu" class="button social"><i class="fa fa-fw fa-github"></i></a></li>
-	        <li><a href="#" class="button social"><i class="fa fa-fw fa-twitter"></i></a></li>
-	        <li><a href="#" title="My Flickr" class="button social"><i class="fa fa-fw fa-flickr"></i></a></li>
+	      <ul class="row">
+	        <li class="col-md-3"><a href="#" class="button social"><i class="fa fa-fw fa-linkedin"></i></a></li>
+	        <li class="col-md-3"><a href="https://github.com/theedu" class="button social"><i class="fa fa-fw fa-github"></i></a></li>
+	        <li class="col-md-3"><a href="#" class="button social"><i class="fa fa-fw fa-twitter"></i></a></li>
+	        <li class="col-md-3"><a href="#" title="My Flickr" class="button social"><i class="fa fa-fw fa-flickr"></i></a></li>
 	      </ul>
 	    </div>
 	  </div>
-	  <div id="footer-below" style="background-color:#222; color:#fff;margin: 0 0 0 0;padding: 25px 0px 25px 0px;">© 
+	  <div id="footer-below" >© 
 	    <script>document.write(new Date().getFullYear())</script> All Rights Reversed
 	  </div>
 	</footer>
 
-
-
-
 </body>
-
 
 <script>
 
@@ -186,10 +197,6 @@
 	    $("body").scrollTop(pos - height);
 	    return false;
 	});
-
-
-
 </script>
-
 
 </html>
