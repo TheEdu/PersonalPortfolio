@@ -13,6 +13,10 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+	<!-- font-awesome -->
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+
 	<style type="text/css">
 
 		#navbar-container{
@@ -40,7 +44,6 @@
 		#contac-body{
 			background-color: #AAA; 
 			margin: 0 15% 0 15%;
-			padding-bottom: 50px;
 		}
 
 
@@ -61,7 +64,7 @@
 		    </div>
 		  <div class="collapse navbar-collapse" id="myNavbar">
 		    <ul id="secciones" class="nav navbar-nav navbar-right">
-		      <li id="about-anchor"><a href="#about">ABOUT</a></li>
+		      <li id="about-anchor" class="active"><a href="#about">ABOUT</a></li>
 		      <li id="portfolio-anchor"><a href="#portfolio">PORTFOLIO</a></li> 
 		      <li id="contac-anchor"><a href="#contac">CONTAC</a></li> 
 		    </ul>
@@ -126,56 +129,59 @@
 	</section>
 
 	<!-- footer -->
-	<div class="navbar navbar-default navbar-fixed-bottom navbar-inverse">
-	    <div class="container">
-	      <p class="navbar-text pull-left">© 2016 - Personal Portfolio
-	      </p>
-
-	      <a href="#" class="navbar-btn btn-danger btn pull-right">
-	      <span class="glyphicon glyphicon-star"></span>  Coming soon</a>
+	<footer>
+	  <div id="footer-above" style="background-color:#444; color:#fff;margin: 0 0 0 0;padding: 50px 0px 50px 0px;">
+	    <div>
+	      <h3 style="margin:0 0 0 0;">About this page</h3>
+	      <p>Made with <i class="fa fa-fw fa-coffee"></i> and <i class="fa fa-fw fa-music"></i><br>by <a href="#">theedu</a>.</p>
 	    </div>
-	</div>
+	    <div>
+	      <h3>Around the Web</h3>
+	      <ul>
+	        <li><a href="#" class="button social"><i class="fa fa-fw fa-linkedin"></i></a></li>
+	        <li><a href="https://github.com/theedu" class="button social"><i class="fa fa-fw fa-github"></i></a></li>
+	        <li><a href="#" class="button social"><i class="fa fa-fw fa-twitter"></i></a></li>
+	        <li><a href="#" title="My Flickr" class="button social"><i class="fa fa-fw fa-flickr"></i></a></li>
+	      </ul>
+	    </div>
+	  </div>
+	  <div id="footer-below" style="background-color:#222; color:#fff;margin: 0 0 0 0;padding: 25px 0px 25px 0px;">qlip © 
+	    <script>document.write(new Date().getFullYear())</script>2016. All Rights Reversed
+	  </div>
+	</footer>
+
+
+
 
 </body>
 
 
 <script>
-	
-	
-	$("a").on("click", function(){
-		//remueve la clase active de todos los botones
-		$('#secciones li').each(function () {
-			$(this).removeClass('active');
-		});
-		//agrega la clase active a los li cuando se presiona su corrrespondiente boton
-		$(this).parent().addClass('active');
-
-		//hace el desplazamiento correctamente
-	    var height= $("#navbar-container").outerHeight();
-	    var pos = $($(this).attr("href")).position().top;
-	    $("body").scrollTop(pos - height);
-	    return false;
-	});
 
 
+	window.onscroll = function() {cambiarSeccionActiva()};
 
-	window.onscroll = function() {myFunction()};
-
-	function myFunction() {
+	function cambiarSeccionActiva() {
 
 
 		$('section').each(function () {
 			var seccion = $(this);
-			if (pageYOffset >= seccion.position().top && pageYOffset < seccion.position().top + seccion.height()){
-				$("a[href='#seccion']")
+			var height = $("#navbar-container").outerHeight();
+
+			var anchor = seccion.attr('id').concat("-anchor");
+			var li = document.getElementById(anchor);
+
+			if (pageYOffset + height >= seccion.position().top && pageYOffset + height < seccion.position().top + seccion.height()){
+				$(li).addClass('active');
 			} else {
-
+				$(li).removeClass('active');
 			}
-
-
 		});
-
 	}
+
+
+
+
 	
 
 
