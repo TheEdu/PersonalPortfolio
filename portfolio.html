@@ -117,6 +117,12 @@
 		  margin-bottom: 50px; 
 		}
 
+		.seccion-titel{
+			color: #333;
+			font-weight: bold;
+			margin-top: 50px;
+		}
+
 		/* Makes images fully responsive */
 
 		.img-responsive,
@@ -231,7 +237,7 @@
 	<!-- ABOUT -->
 	<section id="about">
 		<div id= "about-body" class="container-fluid well">
-			<h2 class="text-center">About</h2>
+			<h2 class="text-center seccion-titel">ABOUT</h2>
 			<hr class="divider-style">
 			<p class="text-center"> 
 			</p>
@@ -242,7 +248,7 @@
 	<!-- PORTFOLIO -->
 	<section id="portfolio">
 		<div id= "portfolio-body" class="container-fluid well">
-			<h2 class="text-center">Portfolio</h2>
+			<h2 class="text-center seccion-titel">PORTFOLIO</h2>
 			<hr class="divider-style">
 				<div class="carousel-container">
 				    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -292,23 +298,52 @@
 	<!-- CONTAC -->
 	<section id="contac">
 		<div id= "contac-body" class="container-fluid well">
-			<h2 class="text-center">Contac</h2>
+			<h2 class="text-center seccion-titel">CONTAC</h2>
 			<hr class="divider-style">
-			<form class="text-center" action="mailto:edigde@gmail.com" method="post">
+			<form class="form-horizontal">
+				<fieldset>
+				<!-- Text input-->
 				<div class="form-group">
-					Name:<br>
-					<input type="text" name="name"><br>
+				  <label class="col-md-4 control-label"></label>  
+				  <div class="col-md-4">
+				  <input id="contac-name" name="name" type="text" placeholder="Name" class="form-control input-md">
+				  </div>
 				</div>
+
+				<!-- Text input-->
 				<div class="form-group">
-					E-mail:<br>
-					<input type="text" name="mail"><br>
+				  <label class="col-md-4 control-label"></label>  
+				  <div class="col-md-4">
+				  <input id="contac-email" name="email" type="email" placeholder="Email Address" class="form-control input-md">
+				  </div>
 				</div>
+
+				<!-- Text input-->
 				<div class="form-group">
-					Message:<br>
-					<input type="text" name="comment" size="20"><br><br>
+				  <label class="col-md-4 control-label"></label>  
+				  <div class="col-md-4">
+				  <input id="contac-phone" name="phone" type="text" placeholder="Phone Number" class="form-control input-md">
+				  </div>
 				</div>
-				<input type="submit" value="Send">
-				<input type="reset" value="Reset">
+
+				<!-- Textarea -->
+				<div class="form-group">
+				  <label class="col-md-4 control-label"></label>
+				  <div class="col-md-4">                     
+				    <textarea class="form-control" id="message" placeholder="Message" name="message"></textarea>
+				  </div>
+				</div>
+
+				<!-- Button (Double) -->
+				<div class="form-group">
+				  <label class="col-md-4 control-label"></label>
+				  <div class="col-md-8">
+				    <button id="button1id" name="button1id" class="btn btn-primary">SEND</button>
+
+				  </div>
+				</div>
+
+				</fieldset>
 			</form>
 		</div>
 	</section>
