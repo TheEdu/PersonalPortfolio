@@ -19,34 +19,45 @@
 
 	<style type="text/css">
 
+		body{ 
+			padding-top: 70px;
+			background-color: #FFF; 
+		}
+
+		#nav-bar{
+			box-shadow: 0px 1.5px 3px #111;
+		}
+
 		#navbar-container{
 			padding-top: 10px;
 			padding-bottom: 10px;
 			margin: 0px 40px 0px 40px;
 		}
 
-		body{ 
-			padding-top: 70px;
-			background-color: #FFF; 
-		}
 
 		#about-body{
 			background-color: #CCC; 
 			margin: 0 15% 0 15%;
+			border-radius:0px;
 		}
 
 
 		#portfolio-body{
 			background-color: #EEE; 
 			margin: 0 15% 0 15%;
+			border-radius:0px; 
+			border-top-width:0px; 
+			border-bottom-width:0px;
 		}
 
 		#contac-body{
 			background-color: #CCC; 
 			margin: 0 15% 0 15%;
+			border-radius:0px;
 		}
 
 		#footer{
+			box-shadow: 0px -1.5px 3px #111;
 			color:#fff;
 		}
 
@@ -62,13 +73,30 @@
 			margin: 0 0 0 0;
 		}
 
+		#lista-in-git{
+			margin-top: 20px;
+		}
+
+		#made-by{
+			margin-top: 20px;
+			font-size: 17px;
+		}
+
+		#copy-right{
+			margin: 0 0 0 0;
+			color: #fff;
+			background: #222;
+			text-align: center;
+			font-size: 17px;
+		}
+
 
 	</style>
 
 </head>
 <body>
 	<!-- NavBar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="nav-bar">
 		<div id="navbar-container" class="container-fluid">
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -90,7 +118,7 @@
 
 	<!-- ABOUT -->
 	<section id="about">
-		<div id= "about-body" class="container-fluid">
+		<div id= "about-body" class="container-fluid well">
 			<h2>About</h2>
 			<p>a</p>
 			<p>a</p>
@@ -107,8 +135,8 @@
 	</section>
 
 	<!-- PORTFOLIO -->
-	<section id="portfolio">
-		<div id= "portfolio-body" class="container-fluid">
+	<section id="portfolio" class="">
+		<div id= "portfolio-body" class="container-fluid well">
 			<h2>Portfolio</h2>
 			<p>a</p>
 			<p>a</p>
@@ -127,7 +155,7 @@
 
 	<!-- CONTAC -->
 	<section id="contac">
-		<div id= "contac-body" class="container-fluid">
+		<div id= "contac-body" class="container-fluid well">
 			<h2>Contac</h2>
 			<p>a</p>
 			<p>a</p>
@@ -147,24 +175,22 @@
 	<footer id="footer">
 	  <div id="footer-above" class="row" >
 	    <div class="footer-col col-md-6 text-center">
-	      <h3 >About this page</h3>
-	      <p>Made with <i class="fa fa-fw fa-coffee"></i> and <i class="fa fa-fw fa-music"></i><br>by <a href="#">theedu</a>.</p>
+	      <h2 >About this page</h2>
+	      <p id="made-by" >Made by <a href="#">Edu</a></p>
 	    </div>
 	    <div class="footer-col col-md-6 text-center"> 
-	      <h3>Around the Web</h3>
-	      <ul class="row">
-	        <li class="col-md-3"><a href="#" class="button social"><i class="fa fa-fw fa-linkedin"></i></a></li>
-	        <li class="col-md-3"><a href="https://github.com/theedu" class="button social"><i class="fa fa-fw fa-github"></i></a></li>
-	        <li class="col-md-3"><a href="#" class="button social"><i class="fa fa-fw fa-twitter"></i></a></li>
-	        <li class="col-md-3"><a href="#" title="My Flickr" class="button social"><i class="fa fa-fw fa-flickr"></i></a></li>
+	      <h2>Around the Web</h2>
+	      <ul id="lista-in-git" class="list-inline">
+	        <li ><a href="#" class="button social"><i class="fa fa-fw fa-linkedin fa-3x"></i></a></li>
+	        <li ><a href="https://github.com/theedu" class="button social"><i class="fa fa-github fa-3x"></i></a></li>
+
 	      </ul>
 	    </div>
 	  </div>
-	  <div id="footer-below" >© 
-	    <script>document.write(new Date().getFullYear())</script> All Rights Reversed
+	  <div id="footer-below">
+	  	<p id="copy-right">© 2016. All Rights Reversed</p> 
 	  </div>
 	</footer>
-
 </body>
 
 <script>
