@@ -280,9 +280,9 @@
 		    </div>
 		  <div class="collapse navbar-collapse" id="myNavbar">
 		    <ul id="secciones" class="nav navbar-nav navbar-right">
-		      <li id="about-anchor" class="active"><a href="#about">ABOUT</a></li>
-		      <li id="portfolio-anchor"><a href="#portfolio">PORTFOLIO</a></li> 
-		      <li id="contac-anchor"><a href="#contac" >CONTAC</a></li> 
+		      <li id="about-anchor" class="active"><a class="nav-anchor" href="#about">ABOUT</a></li>
+		      <li id="portfolio-anchor"><a class="nav-anchor" href="#portfolio">PORTFOLIO</a></li> 
+		      <li id="contac-anchor"><a class="nav-anchor" href="#contac" >CONTAC</a></li> 
 		    </ul>
 		  </div>
 		</div>
@@ -468,16 +468,14 @@
 		});
 	}
 
-	
-	$("a").on("click", function(){
-
+	//esta funcion no es necesario ya que al activarse un anchor se ejecuta la funcion onscroll del objeto window
+	$(".nav-anchor").on("click", function(){
 		var anchorID = $(this).attr('id');
-		if(anchorID != "carouselLeft" && anchorID != "carouselRight"){
-		    var height = $("#navbar-container").outerHeight();
-		    var pos = $($(this).attr("href")).position().top;
-		    $("body").scrollTop(pos - height);
-		    return false;
-		}
+	    var height = $("#navbar-container").outerHeight();
+	    var pos = $($(this).attr("href")).position().top;
+	    $("body").scrollTop(pos - height);
+	    return false;
+		
 	});
 </script>
 
