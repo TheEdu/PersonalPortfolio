@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>PersonalPortfolio</title>
+	<title>Personal Portfolio</title>
 	<link rel="icon" href="favicon-codepen.ico">
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,7 +33,7 @@
 		#navbar-container{
 			padding-top: 10px;
 			padding-bottom: 10px;
-			margin: 0px 40px 0px 40px;
+			margin: 0px 75px 0px 75px;
 		}
 
 
@@ -41,7 +41,7 @@
 			background-color: #CCC; 
 			margin: 0 15% 0 15%;
 			border-radius:0px;
-			padding-bottom: 50px;
+			padding-bottom: 80px;
 		}
 
 
@@ -123,6 +123,7 @@
 			color: #333;
 			font-weight: bold;
 			margin-top: 50px;
+			overflow-wrap: break-word;
 		}
 
 
@@ -133,6 +134,12 @@
 
 		#foto-presentacion{
 			margin-left: 75px;
+		}
+
+		#edu-nav{
+			color:#fff;
+			font-weight: bold;
+			font-size:30px
 		}
 
 		/* Makes images fully responsive */
@@ -218,7 +225,42 @@
 	        #carousel-example-generic{
 	          margin: 0px 0px 20px 0px;
 	        }
+
      	 }
+
+
+     	 @media (max-width: 1200px){
+     	 	#texto-presentacion{
+     	 		margin-left: 50px;
+     	 	}
+     	 }
+
+
+     	@media (max-width: 990px) {
+     	    
+     	    #texto-presentacion{
+				text-align: center;
+				margin: 0 auto;
+				overflow-wrap: break-word;
+			}
+
+			#foto-presentacion{
+
+				width: auto;
+				margin: 0 auto;
+    			display: block;
+    			margin-top: 30px;
+			}
+
+		}
+
+		@media (max-width: 380px){
+
+			#foto-presentacion{
+				width: 100%;
+			}
+
+		}
 
 
 	</style>
@@ -234,7 +276,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span> 
 		      </button>
-		      <a class="navbar-brand" href="#" style="color:#fff;">PersonalPortfolio</a>
+		      <a id="edu-nav" class="navbar-brand" href="#">edu</a>
 		    </div>
 		  <div class="collapse navbar-collapse" id="myNavbar">
 		    <ul id="secciones" class="nav navbar-nav navbar-right">
@@ -385,14 +427,14 @@
 	  <div id="footer-above" class="row" >
 	    <div class="footer-col col-md-6 text-center">
 	      <h2 >About this page</h2>
-	      <p id="made-by" >Made by <a href="#">Edu</a></p>
+	      <p id="made-by" >Made by <a href="#">edu</a></p>
 	    </div>
 	    <div class="footer-col col-md-6 text-center"> 
 	      <h2>Around the Web</h2>
 	      <ul id="lista-in-git" class="list-inline">
 	        <li ><a href="#" class="button social"><i class="fa fa-fw fa-linkedin fa-3x"></i></a></li>
 	        <li ><a href="https://github.com/theedu" class="button social"><i class="fa fa-fw fa-github fa-3x"></i></a></li>
-	        <li>  <a href=""> <i class="fa fa-free-code-camp fa-3x" aria-hidden="true"></i></a> </li>
+	        <li>  <a href="https://www.freecodecamp.com/theedu"> <i class="fa fa-free-code-camp fa-3x" aria-hidden="true"></i></a> </li>
 
 	      </ul>
 	    </div>
